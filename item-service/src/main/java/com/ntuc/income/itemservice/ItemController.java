@@ -11,6 +11,7 @@ public class ItemController {
 
     @GetMapping("/items")
     public List<String> getItems() {
+        System.out.println("Item service invoked");
         return Arrays.asList("iphone", "samsung", "nokia");
     }
 }
