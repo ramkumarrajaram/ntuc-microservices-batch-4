@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ITEM-SERVICE
+server:
+  port: 8080

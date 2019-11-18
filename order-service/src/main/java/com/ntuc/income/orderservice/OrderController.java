@@ -16,6 +16,6 @@ public class OrderController {
     @GetMapping("/orders/items")
     public List<String> getItems(){
         System.out.println("Order service invoked");
-        return restTemplate.getForObject("http://localhost:8080/items", List.class);
+        return restTemplate.getForObject("http://ITEM-SERVICE/items", List.class);
     }
 }
