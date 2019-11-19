@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: EDGE_SERVICE
+
+server:
+  port: 9000
+
+zuul:
+  routes:
+    item-service:
+      path: /items/**
+      serviceId: ITEM-SERVICE
+      stripPrefix: false
+    order-service:
+      path: /orders/**
+      serviceId: ORDER-SERVICE
+      stripPrefix: false
+    shipping-service:
+      path: /shipments/**
+      serviceId: SHIPMENT-SERVICE
+      stripPrefix: false
+    external-service:
+      path: /external/**
+      url: https://httpbin.org/
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
