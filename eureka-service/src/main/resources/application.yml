@@ -4,3 +4,12 @@ server:
 spring:
   application:
     name: EUREK-SERVICE
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
